@@ -139,3 +139,44 @@ h3 {
   .has-docked-nav .navbar-spacer {
     display: block; }
 }
+
+
+.schedule-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.schedule-list > li {
+  display: flex;
+  flex-direction: column;
+  background-color: #00472F;
+  color: white;
+  padding: 1.75rem;
+  border-radius: 8px;
+}
+
+.schedule-list > li.schedule-list--cancelled {
+  background-color: #771212;
+}
+
+.schedule-list > li.schedule-list--special {
+  background-color: #8A6A09;
+}
+
+.schedule-list > li .schedule-list__date {
+  font-size: 2rem;
+  text-align: center;
+  font-weight: bold;
+  border-bottom: 2px solid white;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.schedule-list > li .schedule-list__status {
+  font-size: 2rem;
+  text-align: center;
+  margin: auto;
+}
+
