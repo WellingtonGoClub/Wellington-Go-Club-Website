@@ -83,7 +83,7 @@ $(document).ready(function() {
 
     const STATUS = {
       MEETING: 'Meeting',
-      CANCELLED: 'Cancelled',
+      NO_SESSION: 'No session',
       SPECIAL: 'Special'
     }
 
@@ -105,64 +105,22 @@ $(document).ready(function() {
     // })(2026);
 
     const dates = [
-      createScheduleDate('2024-12-31'),
-      createScheduleDate('2025-01-07'),
-      createScheduleDate('2025-01-14'),
-      createScheduleDate('2025-01-21'),
-      createScheduleDate('2025-01-28'),
-      createScheduleDate('2025-02-04'),
-      createScheduleDate('2025-02-11'),
-      createScheduleDate('2025-02-18'),
-      createScheduleDate('2025-02-25'),
-      createScheduleDate('2025-03-04'),
-      createScheduleDate('2025-03-11'),
-      createScheduleDate('2025-03-18'),
-      createScheduleDate('2025-03-25'),
-      createScheduleDate('2025-04-01'),
-      createScheduleDate('2025-04-08'),
-      createScheduleDate('2025-04-15'),
-      createScheduleDate('2025-04-22', STATUS.CANCELLED, 'University is closed'),
-      createScheduleDate('2025-04-29', STATUS.SPECIAL, 'Annual General Meeting<br>Playing as usual afterwards'),
-      createScheduleDate('2025-05-06'),
-      createScheduleDate('2025-05-13'),
-      createScheduleDate('2025-05-20'),
-      createScheduleDate('2025-05-27'),
-      createScheduleDate('2025-06-03'),
-      createScheduleDate('2025-06-10'),
-      createScheduleDate('2025-06-17'),
-      createScheduleDate('2025-06-24'),
-      createScheduleDate('2025-07-01'),
-      createScheduleDate('2025-07-08'),
-      createScheduleDate('2025-07-15'),
-      createScheduleDate('2025-07-22'),
-      createScheduleDate('2025-07-29'),
-      createScheduleDate('2025-08-05'),
-      createScheduleDate('2025-08-12'),
-      createScheduleDate('2025-08-19'),
-      createScheduleDate('2025-08-26'),
-      createScheduleDate('2025-09-02'),
-      createScheduleDate('2025-09-09'),
-      createScheduleDate('2025-09-16'),
-      createScheduleDate('2025-09-23'),
-      createScheduleDate('2025-09-30'),
-      createScheduleDate('2025-10-07'),
-      createScheduleDate('2025-10-14'),
-      createScheduleDate('2025-10-21'),
-      createScheduleDate('2025-10-28'),
+      // 2025
       createScheduleDate('2025-11-04'),
       createScheduleDate('2025-11-11'),
       createScheduleDate('2025-11-18'),
       createScheduleDate('2025-11-25'),
       createScheduleDate('2025-12-02'),
       createScheduleDate('2025-12-09'),
-      createScheduleDate('2025-12-16', STATUS.CANCELLED, 'Summer break'),
-      createScheduleDate('2025-12-23', STATUS.CANCELLED, 'Summer break'),
-      createScheduleDate('2025-12-30', STATUS.CANCELLED, 'Summer break'),
+      createScheduleDate('2025-12-16', STATUS.NO_SESSION, 'Summer break'),
+      createScheduleDate('2025-12-23', STATUS.NO_SESSION, 'Summer break'),
+      createScheduleDate('2025-12-30', STATUS.NO_SESSION, 'Summer break'),
 
-      createScheduleDate('2026-01-06', STATUS.CANCELLED, 'Summer break'),
-      createScheduleDate('2026-01-13', STATUS.CANCELLED, 'Summer break'),
-      createScheduleDate('2026-01-20', STATUS.CANCELLED, 'Summer break'),
-      createScheduleDate('2026-01-27'),
+      // 2026
+      createScheduleDate('2026-01-06', STATUS.NO_SESSION, 'Summer break'),
+      createScheduleDate('2026-01-13', STATUS.NO_SESSION, 'Summer break'),
+      createScheduleDate('2026-01-20', STATUS.NO_SESSION, 'Summer break'),
+      createScheduleDate('2026-01-27', STATUS.NO_SESSION, 'Summer break'),
       createScheduleDate('2026-02-03'),
       createScheduleDate('2026-02-10'),
       createScheduleDate('2026-02-17'),
@@ -229,7 +187,7 @@ $(document).ready(function() {
 
       const li = document.createElement('li');
 
-      if (date.status === STATUS.CANCELLED) {
+      if (date.status === STATUS.NO_SESSION) {
         li.classList.add('schedule-list--cancelled');
       } else if (date.status === STATUS.SPECIAL) {
         li.classList.add('schedule-list--special');
