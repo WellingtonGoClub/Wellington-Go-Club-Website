@@ -87,6 +87,23 @@ $(document).ready(function() {
       SPECIAL: 'Special'
     }
 
+    // Date generation code:
+    // 
+    // ((year) => {
+    //   let result = '[';
+    //   let d = new Date('2026-01-01');
+    // 
+    //   while (d.getFullYear() === year) {
+    //     if (d.getDay() === 2) {
+    //       result += `\n  createScheduleDate('${d.toISOString().split('T')[0]}'),`;
+    //     }
+    //     d.setDate(d.getDate() + 1);
+    //   }
+    // 
+    //   result += '\n];'
+    //   console.log(result)
+    // })(2026);
+
     const dates = [
       createScheduleDate('2024-12-31'),
       createScheduleDate('2025-01-07'),
@@ -138,10 +155,63 @@ $(document).ready(function() {
       createScheduleDate('2025-11-25'),
       createScheduleDate('2025-12-02'),
       createScheduleDate('2025-12-09'),
-      createScheduleDate('2025-12-16'),
-      createScheduleDate('2025-12-23'),
-      createScheduleDate('2025-12-30'),
-    ]
+      createScheduleDate('2025-12-16', STATUS.CANCELLED, 'Summer break'),
+      createScheduleDate('2025-12-23', STATUS.CANCELLED, 'Summer break'),
+      createScheduleDate('2025-12-30', STATUS.CANCELLED, 'Summer break'),
+
+      createScheduleDate('2026-01-06', STATUS.CANCELLED, 'Summer break'),
+      createScheduleDate('2026-01-13', STATUS.CANCELLED, 'Summer break'),
+      createScheduleDate('2026-01-20', STATUS.CANCELLED, 'Summer break'),
+      createScheduleDate('2026-01-27'),
+      createScheduleDate('2026-02-03'),
+      createScheduleDate('2026-02-10'),
+      createScheduleDate('2026-02-17'),
+      createScheduleDate('2026-02-24'),
+      createScheduleDate('2026-03-03'),
+      createScheduleDate('2026-03-10'),
+      createScheduleDate('2026-03-17'),
+      createScheduleDate('2026-03-24'),
+      createScheduleDate('2026-03-31'),
+      createScheduleDate('2026-04-07'),
+      createScheduleDate('2026-04-14'),
+      createScheduleDate('2026-04-21'),
+      createScheduleDate('2026-04-28'),
+      createScheduleDate('2026-05-05'),
+      createScheduleDate('2026-05-12'),
+      createScheduleDate('2026-05-19'),
+      createScheduleDate('2026-05-26'),
+      createScheduleDate('2026-06-02'),
+      createScheduleDate('2026-06-09'),
+      createScheduleDate('2026-06-16'),
+      createScheduleDate('2026-06-23'),
+      createScheduleDate('2026-06-30'),
+      createScheduleDate('2026-07-07'),
+      createScheduleDate('2026-07-14'),
+      createScheduleDate('2026-07-21'),
+      createScheduleDate('2026-07-28'),
+      createScheduleDate('2026-08-04'),
+      createScheduleDate('2026-08-11'),
+      createScheduleDate('2026-08-18'),
+      createScheduleDate('2026-08-25'),
+      createScheduleDate('2026-09-01'),
+      createScheduleDate('2026-09-08'),
+      createScheduleDate('2026-09-15'),
+      createScheduleDate('2026-09-22'),
+      createScheduleDate('2026-09-29'),
+      createScheduleDate('2026-10-06'),
+      createScheduleDate('2026-10-13'),
+      createScheduleDate('2026-10-20'),
+      createScheduleDate('2026-10-27'),
+      createScheduleDate('2026-11-03'),
+      createScheduleDate('2026-11-10'),
+      createScheduleDate('2026-11-17'),
+      createScheduleDate('2026-11-24'),
+      createScheduleDate('2026-12-01'),
+      createScheduleDate('2026-12-08'),
+      createScheduleDate('2026-12-15'),
+      createScheduleDate('2026-12-22'),
+      createScheduleDate('2026-12-29'),
+    ];
 
     const dateList = document.createElement('ol');
     dateList.classList.add('schedule-list');
