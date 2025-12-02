@@ -111,7 +111,7 @@ $(document).ready(function() {
       createScheduleDate('2025-11-18'),
       createScheduleDate('2025-11-25'),
       createScheduleDate('2025-12-02'),
-      createScheduleDate('2025-12-09'),
+      createScheduleDate('2025-12-09', STATUS.SPECIAL, 'Final session: movie night!'),
       createScheduleDate('2025-12-16', STATUS.NO_SESSION, 'Summer break'),
       createScheduleDate('2025-12-23', STATUS.NO_SESSION, 'Summer break'),
       createScheduleDate('2025-12-30', STATUS.NO_SESSION, 'Summer break'),
