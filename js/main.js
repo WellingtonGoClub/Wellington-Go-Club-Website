@@ -132,7 +132,7 @@ $(document).ready(function() {
       createScheduleDate('2026-03-31'),
       createScheduleDate('2026-04-07', STATUS.NO_SESSION, 'Uni closed for Easter'),
       createScheduleDate('2026-04-14'),
-      createScheduleDate('2026-04-21'),
+      createScheduleDate('2026-04-21', STATUS.NO_SESSION, 'Uni closed due to extreme weather'),
       createScheduleDate('2026-04-28'),
       createScheduleDate('2026-05-05'),
       createScheduleDate('2026-05-12'),
