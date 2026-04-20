@@ -136,7 +136,7 @@ $(document).ready(function() {
       createScheduleDate('2026-04-28'),
       createScheduleDate('2026-05-05'),
       createScheduleDate('2026-05-12'),
-      createScheduleDate('2026-05-19'),
+      createScheduleDate('2026-05-19', STATUS.SPECIAL, 'Annual General Meeting (short) - games afterwards as usual'),
       createScheduleDate('2026-05-26'),
       createScheduleDate('2026-06-02'),
       createScheduleDate('2026-06-09'),
